@@ -2,9 +2,28 @@ package org.example.demo;
 
 import junit.framework.AssertionFailedError;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class LoginTests {
+
+    @BeforeClass
+    public void beforeClass(){
+        System.out.println("before class method executed");
+    }
+    @AfterClass
+    public void afterClass(){
+        System.out.println("after class method executed");
+    }
+
+    @BeforeMethod
+    public void beforemethod(){
+        System.out.println("Before method executed...");
+    }
+
+    @AfterMethod
+    public void afterMethod(){
+        System.out.println("After method executed.....");
+    }
     @Test(priority = 1,testName = "Login test with valid username and password")
     public void loginWithValidUser(){
         System.out.println("Login test with valid user and password");
