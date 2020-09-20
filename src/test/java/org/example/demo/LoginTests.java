@@ -6,6 +6,26 @@ import org.testng.annotations.*;
 
 public class LoginTests {
 
+    @BeforeSuite
+    public void beforeSuite(){
+        System.out.println("Before suite executed");
+    }
+
+    @AfterSuite
+    public void afterSuite(){
+        System.out.println("After suite executed");
+    }
+
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("Before test executed");
+    }
+
+    @AfterTest
+    public void afterTest(){
+        System.out.println("After test exe...");
+    }
+
     @BeforeClass
     public void beforeClass(){
         System.out.println("before class method executed");
